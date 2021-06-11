@@ -21,7 +21,6 @@
  * PROVIDED HEREUNDER IS PROVIDED "AS IS". HTBLA LEONDING HAS NO OBLIGATION
  * TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
-
 import org.junit.jupiter.api.Test;
 import java.util.regex.Matcher;
 import static org.junit.jupiter.api.Assertions.*;
@@ -105,6 +104,5 @@ public class HttpUrlCheckerTest {
         Matcher matcher = HttpUrlChecker.getMatcher("http://www.37-.com");
         assertFalse(matcher.find());
     }
-
 
 }

@@ -1,3 +1,7 @@
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /*
  * Copyright ©2018. Created by P. Bauer (p.bauer@htl-leonding.ac.at),
  * Department of Informatics and Media Technique, HTBLA Leonding,
@@ -21,3 +25,11 @@
  * PROVIDED HEREUNDER IS PROVIDED "AS IS". HTBLA LEONDING HAS NO OBLIGATION
  * TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
+public class HttpUrlChecker{
+    public static Matcher getMatcher(String httpSting){
+        Pattern pattern = Pattern.compile("^(https?://)(www\\.)?([\\w]+(\\.|-))+[\\w]{2,63}$");
+        Matcher matcher = pattern.matcher(httpSting);
+
+        return matcher;
+    }
+}
