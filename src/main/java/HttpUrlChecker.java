@@ -28,6 +28,7 @@ import java.util.regex.Pattern;
 public class HttpUrlChecker{
     public static Matcher getMatcher(String httpSting){
 
+        
         Pattern pattern = Pattern.compile("^(https?://)(www\\.)?([\\w]+(\\.|-))+[\\w]{2,63}$");
         Matcher matcher = pattern.matcher(httpSting);
 
